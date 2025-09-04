@@ -1,41 +1,39 @@
-/* Force page background */
+/* FORCE ALL BACKGROUNDS */
 body,
 .md-container,
 .md-main,
-.md-content {
+.md-content,
+.md-typeset,
+.md-typeset__table,
+.md-typeset__scrollwrap,
+.md-sidebar,
+.md-nav,
+.md-footer,
+.md-header,
+.md-tabs {
   background: #0a164f !important;
+  color: #fff !important;
 }
 
-/* Force header and footer color */
-.md-header, .md-footer {
-  background: #0a164f !important;
-  border: none !important;
-}
-
-/* Navigation and links */
-a, .md-nav__link, .md-nav__item .md-nav__link--active {
+/* NAVIGATION AND LINKS */
+a, .md-nav__link, .md-nav__item .md-nav__link--active, .md-typeset a {
   color: #3c50ff !important;
 }
 
-/* Code blocks */
+/* CODE BLOCKS */
 pre, code, .md-typeset code {
   background: #191970 !important;
   color: #ad00ff !important;
 }
 
-/* Sidebar navigation */
-.md-sidebar, .md-nav {
-  background: #0a164f !important;
-}
-
-/* Table of contents */
-.md-nav__list, .md-nav__title {
-  background: #0a164f !important;
-  color: #3c50ff !important;
-}
-
-/* Button colors (if any) */
+/* BUTTONS */
 .md-button, .md-button--primary {
   background: #3c50ff !important;
   color: #fff !important;
+}
+
+/* REMOVE SHADOW AND BORDER */
+.md-header, .md-footer, .md-tabs, .md-sidebar, .md-nav {
+  box-shadow: none !important;
+  border: none !important;
 }
