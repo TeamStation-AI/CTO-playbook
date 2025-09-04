@@ -1,4 +1,4 @@
-site_name: TeamStation AI — CTO Playbook
+site_name: TeamStation AI
 site_url: https://teamstation-ai.github.io/CTO-playbook/
 repo_name: TeamStation-AI/CTO-playbook
 repo_url: https://github.com/TeamStation-AI/CTO-playbook
@@ -8,18 +8,18 @@ strict: true
 
 theme:
   name: material
-  logo: assets/TS new logo concept 2024.png
-  favicon: assets/TS new logo concept 2024.png
+  # logo: (removed to use text brand)
+  favicon: "assets/TS new logo concept 2024.png"
   palette:
     - scheme: default
-      primary: custom
-      accent: custom
+      primary: '#0a164f'
+      accent: '#3c50ff'
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: custom
-      accent: custom
+      primary: '#0a164f'
+      accent: '#3c50ff'
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
