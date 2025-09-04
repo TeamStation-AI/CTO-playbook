@@ -14,8 +14,8 @@ theme:
     - content.code.copy
     - toc.integrate
     - announce.dismiss
-  logo: assets/TS new logo concept 2024.png
-  favicon: assets/TS new logo concept 2024.png
+  logo: assets/teamstation-logo.png
+  favicon: assets/teamstation-logo.png
   palette:
     - scheme: default
       primary: '#0a164f'
