@@ -1,9 +1,12 @@
 /* TeamStation AI — Material theme brand styling
    Keep usability, avoid global overrides */
 
+/* Load Poppins 700 for the header brand */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 :root {
   --ts-primary: #0a164f;
-  --ts-accent: #3c50ff;
+  --ts-accent:  #3c50ff;
   --ts-accent-hover: #5f74ff;
 }
 
@@ -11,10 +14,19 @@
 [data-md-color-scheme="default"],
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: var(--ts-primary);
-  --md-accent-fg-color: var(--ts-accent);
+  --md-accent-fg-color:  var(--ts-accent);
 }
 
-/* Links */
+/* Header brand as text (no logo) */
+.md-header__title,
+.md-header__title .md-ellipsis,
+.md-header__title a {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Links in content */
 .md-typeset a {
   color: var(--ts-accent);
   text-decoration-color: rgba(60, 80, 255, 0.4);
@@ -55,5 +67,3 @@
 .md-footer {
   box-shadow: none;
 }
-
-/* Do NOT force global backgrounds or text colors */
