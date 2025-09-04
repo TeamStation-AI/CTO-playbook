@@ -15,15 +15,15 @@ theme:
     - content.code.copy
     - toc.integrate
     - announce.dismiss
-  logo: assets/teamstation-logo.png       # Place your logo file here
-  favicon: assets/teamstation-logo.png    # Use your logo as favicon
+  logo: assets/teamstation-logo.png
+  favicon: assets/teamstation-logo.png
   palette:
     - scheme: default
-      primary: '#0a164f'                  # Deep Space Blue (background)
-      accent: '#3c50ff'                   # Electric Blue
-      background: '#0a164f'               # Page background
-      text: '#ffffff'                     # White text
-      code: '#ad00ff'                     # Neon purple for code blocks
+      primary: '#0a164f'    # Deep Space Blue
+      accent: '#3c50ff'     # Electric Blue
+      background: '#0a164f' # Page background
+      text: '#ffffff'       # White text
+      code: '#ad00ff'       # Neon purple for code blocks
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -39,7 +39,7 @@ theme:
   language: en
 
 extra_css:
-  - assets/custom.css                     # (Optional) For grid/neon effects
+  - assets/custom.css
 
 markdown_extensions:
   - admonition
