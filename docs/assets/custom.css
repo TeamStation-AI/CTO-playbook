@@ -1,13 +1,41 @@
-body {
+/* Force page background */
+body,
+.md-container,
+.md-main,
+.md-content {
   background: #0a164f !important;
 }
+
+/* Force header and footer color */
 .md-header, .md-footer {
   background: #0a164f !important;
+  border: none !important;
 }
-a, .md-nav__link {
+
+/* Navigation and links */
+a, .md-nav__link, .md-nav__item .md-nav__link--active {
   color: #3c50ff !important;
 }
-pre, code {
+
+/* Code blocks */
+pre, code, .md-typeset code {
   background: #191970 !important;
   color: #ad00ff !important;
+}
+
+/* Sidebar navigation */
+.md-sidebar, .md-nav {
+  background: #0a164f !important;
+}
+
+/* Table of contents */
+.md-nav__list, .md-nav__title {
+  background: #0a164f !important;
+  color: #3c50ff !important;
+}
+
+/* Button colors (if any) */
+.md-button, .md-button--primary {
+  background: #3c50ff !important;
+  color: #fff !important;
 }
