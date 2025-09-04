@@ -3,6 +3,10 @@ site_url: https://cto.teamstation.dev
 repo_name: TeamStation-AI/CTO-playbook
 repo_url: https://github.com/TeamStation-AI/CTO-playbook
 
+# Use the docs/ directory as the source for pages
+docs_dir: docs
+strict: true
+
 theme:
   name: material
   features:
