@@ -1,0 +1,13 @@
+body {
+  background: #0a164f !important;
+}
+.md-header, .md-footer {
+  background: #0a164f !important;
+}
+a, .md-nav__link {
+  color: #3c50ff !important;
+}
+pre, code {
+  background: #191970 !important;
+  color: #ad00ff !important;
+}
