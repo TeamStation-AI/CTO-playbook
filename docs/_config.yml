@@ -1,0 +1,24 @@
+title: TeamStation AI
+description: CTO Playbook
+url: https://teamstation-ai.github.io
+baseurl: /CTO-playbook
+
+theme: null
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+permalink: pretty
+search_enabled: true
+
+# Force dark mode by default
+color_scheme: dark
+
+# Use text title (no logo image) and GitHub link
+logo:
+aux_links:
+  "View on GitHub":
+    - "https://github.com/TeamStation-AI/CTO-playbook"
+
+exclude:
+  - mkdocs.yml
