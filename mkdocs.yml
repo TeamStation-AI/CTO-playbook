@@ -8,12 +8,6 @@ strict: true
 
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - content.code.copy
-    - toc.integrate
-    - announce.dismiss
   logo: assets/teamstation-logo.png
   favicon: assets/teamstation-logo.png
   palette:
