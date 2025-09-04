@@ -32,6 +32,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - sitemap
 
 nav:
   - CTO Playbook: index.md
@@ -65,3 +66,5 @@ nav:
       - Publications: resources/publications.md
       - Glossary: resources/glossary.md
   - FAQ: faq/cto-faq.md
+  - Schedule a Demo: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JD2e4SmSzEC82NiTvzvUJNaghMafqlUdoTB9YlWfUSsJa2fC4uqoXGoOb9XNhRIsNa-IOIXSq
+
