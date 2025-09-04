@@ -1,0 +1,36 @@
+site_name: TeamStation AI — CTO Playbook
+site_url: https://cto.teamstation.dev
+repo_name: TeamStation-AI/cto-playbook
+repo_url: https://github.com/TeamStation-AI/cto-playbook
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: blue
+  language: en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
+
+plugins:
+  - search
+
+nav:
+  - CTO Playbook: index.md
