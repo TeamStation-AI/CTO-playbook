@@ -12,14 +12,14 @@ theme:
   favicon: "assets/TS new logo concept 2024.png"
   palette:
     - scheme: default
-      primary: '#0a164f'
-      accent: '#3c50ff'
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: '#0a164f'
-      accent: '#3c50ff'
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
