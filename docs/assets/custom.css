@@ -1,39 +1,59 @@
-/* FORCE ALL BACKGROUNDS */
-body,
-.md-container,
-.md-main,
-.md-content,
-.md-typeset,
-.md-typeset__table,
-.md-typeset__scrollwrap,
-.md-sidebar,
-.md-nav,
-.md-footer,
+/* TeamStation AI — Material theme brand styling
+   Keep usability, avoid global overrides */
+
+:root {
+  --ts-primary: #0a164f;
+  --ts-accent: #3c50ff;
+  --ts-accent-hover: #5f74ff;
+}
+
+/* Apply brand to Material color system */
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--ts-primary);
+  --md-accent-fg-color: var(--ts-accent);
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--ts-accent);
+  text-decoration-color: rgba(60, 80, 255, 0.4);
+}
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--ts-accent-hover);
+  text-decoration-color: rgba(60, 80, 255, 0.7);
+}
+
+/* Navigation active states */
+.md-nav__link--active,
+.md-tabs__link--active {
+  color: var(--ts-accent);
+}
+
+/* Buttons */
+.md-typeset .md-button,
+.md-typeset .md-button--primary {
+  background-color: var(--ts-accent);
+  border-color: var(--ts-accent);
+  color: #fff;
+}
+.md-typeset .md-button:hover,
+.md-typeset .md-button--primary:hover {
+  background-color: var(--ts-accent-hover);
+  border-color: var(--ts-accent-hover);
+  color: #fff;
+}
+
+/* Code blocks: keep theme colors; add subtle brand accent */
+.md-typeset pre code {
+  border-left: 3px solid var(--ts-accent);
+}
+
+/* Header/footer minimal elevation */
 .md-header,
-.md-tabs {
-  background: #0a164f !important;
-  color: #fff !important;
+.md-footer {
+  box-shadow: none;
 }
 
-/* NAVIGATION AND LINKS */
-a, .md-nav__link, .md-nav__item .md-nav__link--active, .md-typeset a {
-  color: #3c50ff !important;
-}
-
-/* CODE BLOCKS */
-pre, code, .md-typeset code {
-  background: #191970 !important;
-  color: #ad00ff !important;
-}
-
-/* BUTTONS */
-.md-button, .md-button--primary {
-  background: #3c50ff !important;
-  color: #fff !important;
-}
-
-/* REMOVE SHADOW AND BORDER */
-.md-header, .md-footer, .md-tabs, .md-sidebar, .md-nav {
-  box-shadow: none !important;
-  border: none !important;
-}
+/* Do NOT force global backgrounds or text colors */
