@@ -3,7 +3,6 @@ site_url: https://cto.teamstation.dev
 repo_name: TeamStation-AI/CTO-playbook
 repo_url: https://github.com/TeamStation-AI/CTO-playbook
 
-# Use the docs/ directory as the source for pages
 docs_dir: docs
 strict: true
 
@@ -19,20 +18,14 @@ theme:
   favicon: assets/teamstation-logo.png
   palette:
     - scheme: default
-      primary: '#0a164f'    # Deep Space Blue
-      accent: '#3c50ff'     # Electric Blue
-      background: '#0a164f' # Page background
-      text: '#ffffff'       # White text
-      code: '#ad00ff'       # Neon purple for code blocks
+      primary: '#0a164f'
+      accent: '#3c50ff'
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
       primary: '#0a164f'
       accent: '#3c50ff'
-      background: '#0a164f'
-      text: '#ffffff'
-      code: '#ad00ff'
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
