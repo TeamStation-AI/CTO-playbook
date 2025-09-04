@@ -1,0 +1,73 @@
+/* TeamStation AI — additive CSS (non-destructive) */
+/* Load Poppins 700 for header brand text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Brand colors (used to override Material color vars) */
+:root {
+  --ts-primary: #0a164f;       /* deep blue */
+  --ts-accent:  #3c50ff;       /* electric blue */
+  --ts-accent-hover: #5f74ff;  /* lighter hover */
+}
+
+/* Apply brand colors to Material variables for both light/dark schemes */
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--ts-primary);
+  --md-accent-fg-color:  var(--ts-accent);
+}
+
+/* Hide the image logo (keep mkdocs.yml untouched) */
+.md-header__button.md-logo {
+  display: none !important;
+}
+
+/* Header brand text styling (uses site_name; no mkdocs.yml edits required) */
+.md-header__title,
+.md-header__title .md-ellipsis,
+.md-header__title a {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  color: #fff; /* ensure white brand text */
+}
+
+/* Content link color */
+.md-typeset a {
+  color: var(--ts-accent);
+  text-decoration-color: rgba(60, 80, 255, 0.4);
+}
+.md-typeset a:hover,
+.md-typeset a:focus {
+  color: var(--ts-accent-hover);
+  text-decoration-color: rgba(60, 80, 255, 0.7);
+}
+
+/* Active states in nav/tabs */
+.md-nav__link--active,
+.md-tabs__link--active {
+  color: var(--ts-accent);
+}
+
+/* Buttons */
+.md-typeset .md-button,
+.md-typeset .md-button--primary {
+  background-color: var(--ts-accent);
+  border-color: var(--ts-accent);
+  color: #fff;
+}
+.md-typeset .md-button:hover,
+.md-typeset .md-button--primary:hover {
+  background-color: var(--ts-accent-hover);
+  border-color: var(--ts-accent-hover);
+  color: #fff;
+}
+
+/* Subtle accent on code blocks */
+.md-typeset pre code {
+  border-left: 3px solid var(--ts-accent);
+}
+
+/* Minimal elevation */
+.md-header,
+.md-footer {
+  box-shadow: none;
+}
