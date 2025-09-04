@@ -32,7 +32,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - sitemap
 
 nav:
   - CTO Playbook: index.md
