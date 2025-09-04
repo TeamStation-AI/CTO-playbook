@@ -2,7 +2,7 @@
 /* Load Poppins 700 for header brand text */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-/* Brand colors (used to override Material color vars) */
+/* Brand colors */
 :root {
   --ts-primary: #0a164f;       /* deep blue */
   --ts-accent:  #3c50ff;       /* electric blue */
@@ -16,12 +16,12 @@
   --md-accent-fg-color:  var(--ts-accent);
 }
 
-/* Hide the image logo (keep mkdocs.yml untouched) */
+/* Hide the image logo (keeps mkdocs.yml untouched if a logo is set) */
 .md-header__button.md-logo {
   display: none !important;
 }
 
-/* Header brand text styling (uses site_name; no mkdocs.yml edits required) */
+/* Header brand text styling (uses site_name) */
 .md-header__title,
 .md-header__title .md-ellipsis,
 .md-header__title a {
@@ -30,7 +30,7 @@
   color: #fff; /* ensure white brand text */
 }
 
-/* Content link color */
+/* Content links */
 .md-typeset a {
   color: var(--ts-accent);
   text-decoration-color: rgba(60, 80, 255, 0.4);
