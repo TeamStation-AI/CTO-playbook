@@ -1,7 +1,7 @@
 title: TeamStation AI
 description: CTO Playbook
-url: https://teamstation-ai.github.io
-baseurl: /CTO-playbook
+url: https://cto.teamstation.dev
+baseurl: ""
 
 theme: null
 remote_theme: just-the-docs/just-the-docs
@@ -16,6 +16,3 @@ logo:
 aux_links:
   "View on GitHub":
     - "https://github.com/TeamStation-AI/CTO-playbook"
-
-exclude:
-  - mkdocs.yml
