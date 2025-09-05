@@ -9,5 +9,5 @@
 **How (plain English):** semantic chunking in RAG + staged/multi-step prompting; **L2-aware validation** separates thinking signal from language-form noise; expert reviewers confirm high-impact flags before synthesis.
 
 **Further reading**
-- Technical brief (GitHub microsite): https://teamstation-ai.github.io/Axiom-Cortex-Methodology/
+- Technical brief: https://docs.teamstation.dev/axiom-cortex/
 - Publications (Google Scholar author): https://scholar.google.com/citations?user=aNol-ycAAAAJ&hl=en

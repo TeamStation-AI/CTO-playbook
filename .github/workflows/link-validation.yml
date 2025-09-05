@@ -9,8 +9,7 @@ on:
     paths:
       - '**.md'
       - 'docs/**'
-      - 'mkdocs.yml'
-      - 'requirements.txt'
+      - 'docs/_config.yml'
 
 jobs:
   link-check:
@@ -19,28 +18,25 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          python-version: '3.x'
+          ruby-version: '3.1'
+          bundler-cache: true
 
-      - name: Install dependencies
+      - name: Install Jekyll and dependencies
         run: |
-          pip install -r requirements.txt
-          pip install requests beautifulsoup4
+          gem install jekyll bundler
+          gem install html-proofer
 
-      - name: Build site for link checking
-        run: mkdocs build
-
-      - name: Install htmlproofer
+      - name: Build Jekyll site for link checking
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby-full
-          sudo gem install html-proofer
+          cd docs
+          jekyll build
 
       - name: Check external links
         run: |
-          htmlproofer ./site \
+          htmlproofer ./docs/_site \
             --assume-extension \
             --check-external-hash \
             --allow-hash-href \
