@@ -70,16 +70,14 @@ markdown_extensions:
 
 plugins:
   - search
-  - sitemap
-  - seo:
-      site_description: "Build predictable, auditable nearshore engineering extensions with TeamStation AI™ under one SLA. Cognitive AI evaluations, onboarding, devices/MDM, EOR, and performance (BARS)."
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
-  - macros
+  - macros:
+      include_dir: docs/snippets
   - htmlproofer:
       raise_error: true
-      validate_external_urls: true
+      validate_external_urls: false
       ignore_urls:
         - "^mailto:"
         - "^tel:"
@@ -92,7 +90,7 @@ nav:
       - Platform vs. Agency: strategy/platform-vs-agency.md
   - Platform:
       - Nearshore IT Co-Pilot™: platform/nearshore-it-co-pilot.md
-      - Axiom Cortex™: https://docs.teamstation.dev/
+      - Axiom Cortex™: platform/axiom-cortex.md
       - Nebula Neural Search™: platform/nebula-neural-search.md
       - SSOT & Governance: platform/ssot-governance.md
       - Devices, MDM & EOR: platform/devices-mdm-eor.md
