@@ -7,4 +7,4 @@
 2) https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aNol-ycAAAAJ&citation_for_view=aNol-ycAAAAJ:9yKSN-GCB0IC  
 3) https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aNol-ycAAAAJ&citation_for_view=aNol-ycAAAAJ:d1gkVwhDpl0C
 
-**SSRN (DOI):** Redesigning Human Capacity in Nearshore IT Staff Augmentation — https://ssrn.com/abstract=5165433
+**SSRN (DOI):** [Redesigning Human Capacity in Nearshore IT Staff Augmentation](https://ssrn.com/abstract=5165433)
