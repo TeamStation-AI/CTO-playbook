@@ -7,6 +7,14 @@ site_description: Build predictable, auditable nearshore engineering extensions 
 docs_dir: docs
 strict: true
 
+# SEO Enhancement
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/TeamStation-AI
+    - icon: fontawesome/solid/globe
+      link: https://teamstation.dev
+
 theme:
   name: material
   language: en
@@ -25,6 +33,14 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
 
 extra_css:
   - assets/custom.css
@@ -47,9 +63,9 @@ markdown_extensions:
 
 plugins:
   - search
-  - sitemap
-  - seo:
-      site_description: "Build predictable, auditable nearshore engineering extensions with TeamStation AI™ under one SLA. Cognitive AI evaluations, onboarding, devices/MDM, EOR, and performance (BARS)."
+  - redirects
+  - macros:
+      include_dir: docs/snippets
 
 nav:
   - CTO Playbook: index.md
