@@ -41,6 +41,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.highlight
+  - pymdownx.magiclink
 
 plugins:
   - search
@@ -80,4 +81,4 @@ nav:
       - Glossary: resources/glossary.md
       - LATAM Coverage: resources/coverage-latam.md
   - FAQ: faq/cto-faq.md
-  - Schedule a Demo: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JD2e4SmSzEC82NiTvzvUJNaghMafqlUdoTB9YlWfUSsJa2fC4uqoXGoOb9XNhRIsNa-IOIXSq
+  - Schedule a Demo: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JD2e4SmSzEC82NiTvzvUJNaghMafqlUdoTB9YlWfUSsJa2fC4uqoXGoOb9XNhRIsNa-IOIXSq.
