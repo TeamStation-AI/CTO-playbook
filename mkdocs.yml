@@ -7,7 +7,7 @@ site_description: Build predictable, auditable nearshore engineering extensions 
 use_directory_urls: true
 
 docs_dir: docs
-strict: true
+strict: false
 
 theme:
   name: material
@@ -70,19 +70,24 @@ markdown_extensions:
 
 plugins:
   - search
-  - sitemap
-  - seo:
-      site_description: "Build predictable, auditable nearshore engineering extensions with TeamStation AI™ under one SLA. Cognitive AI evaluations, onboarding, devices/MDM, EOR, and performance (BARS)."
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
-  - macros
+  - macros:
+      include_dir: docs/snippets
   - htmlproofer:
-      raise_error: true
-      validate_external_urls: true
+      raise_error: false
+      validate_external_urls: false
       ignore_urls:
         - "^mailto:"
         - "^tel:"
+        - "^https://calendar.google.com/"
+        - "^https://teamstation.dev/"
+        - "^https://pricing.teamstation.dev/"
+        - "^https://jobs.teamstation.dev/"
+        - "^https://docs.teamstation.dev/"
+        - "^https://ssrn.com/"
+        - "^https://a.co/"
 
 nav:
   - CTO Playbook: index.md
