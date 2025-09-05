@@ -1,0 +1,110 @@
+name: Link Validation
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+  pull_request:
+    paths:
+      - '**.md'
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install requests beautifulsoup4
+
+      - name: Build site for link checking
+        run: mkdocs build
+
+      - name: Install htmlproofer
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full
+          sudo gem install html-proofer
+
+      - name: Check external links
+        run: |
+          htmlproofer ./site \
+            --assume-extension \
+            --check-external-hash \
+            --allow-hash-href \
+            --disable-external \
+            --ignore-urls="/calendar.google.com/,/teamstation.dev/,/pricing.teamstation.dev/,/jobs.teamstation.dev/"
+        continue-on-error: true
+
+      - name: Check TeamStation links specifically
+        run: |
+          python3 << 'EOF'
+          import requests
+          import sys
+          import time
+          from urllib.parse import urlparse
+          
+          # List of critical TeamStation links to validate
+          critical_links = [
+              "https://teamstation.dev/",
+              "https://teamstation.dev/latam-talent",
+              "https://teamstation.dev/nearshore-integrated-services",
+              "https://teamstation.dev/nearshore-it-staff-augmentation-pricing",
+              "https://pricing.teamstation.dev/",
+              "https://jobs.teamstation.dev/"
+          ]
+          
+          def check_link(url, timeout=10):
+              try:
+                  response = requests.head(url, timeout=timeout, allow_redirects=True)
+                  return response.status_code < 400
+              except:
+                  try:
+                      response = requests.get(url, timeout=timeout, allow_redirects=True)
+                      return response.status_code < 400
+                  except:
+                      return False
+          
+          failed_links = []
+          
+          for link in critical_links:
+              print(f"Checking: {link}")
+              if not check_link(link):
+                  failed_links.append(link)
+                  print(f"❌ FAILED: {link}")
+              else:
+                  print(f"✅ OK: {link}")
+              time.sleep(1)  # Be respectful with requests
+          
+          if failed_links:
+              print(f"\n❌ {len(failed_links)} critical links failed:")
+              for link in failed_links:
+                  print(f"  - {link}")
+              sys.exit(1)
+          else:
+              print(f"\n✅ All {len(critical_links)} critical links are working!")
+          EOF
+
+      - name: Comment on PR (if applicable)
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ **Link validation failed!** Some links may be broken. Please check the workflow logs for details.'
+            })

@@ -4,6 +4,8 @@ repo_name: TeamStation-AI/CTO-playbook
 repo_url: https://github.com/TeamStation-AI/CTO-playbook
 site_description: Build predictable, auditable nearshore engineering extensions with TeamStation AI™ under one SLA. Cognitive AI evaluations, onboarding, devices/MDM, EOR, and performance (BARS).
 
+use_directory_urls: true
+
 docs_dir: docs
 strict: true
 
@@ -31,6 +33,27 @@ extra_css:
   - assets/custom.v2.css
   - assets/site.css
 
+extra:
+  links:
+    demo: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1JD2e4SmSzEC82NiTvzvUJNaghMafqlUdoTB9YlWfUSsJa2fC4uqoXGoOb9XNhRIsNa-IOIXSq
+    website: https://teamstation.dev/
+    pricing: https://pricing.teamstation.dev/
+    sitemap: https://teamstation.dev/sitemap.xml
+    org: https://github.com/TeamStation-AI
+    axiom_docs: https://docs.teamstation.dev/
+    papers:
+      redesigning-human-capacity: https://ssrn.com/abstract=5165433
+      scientific-framework: https://ssrn.com/abstract=5188490
+      nearshore-metrics: https://ssrn.com/abstract=5253470
+    book: https://a.co/d/2B5zpDP
+  social_image: https://teamstation.dev/og-image.png
+  org:
+    name: TeamStation AI
+    url: https://teamstation.dev/
+    image: https://teamstation.dev/og-image.png
+    same_as:
+      - https://github.com/TeamStation-AI
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -50,6 +73,16 @@ plugins:
   - sitemap
   - seo:
       site_description: "Build predictable, auditable nearshore engineering extensions with TeamStation AI™ under one SLA. Cognitive AI evaluations, onboarding, devices/MDM, EOR, and performance (BARS)."
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - macros
+  - htmlproofer:
+      raise_error: true
+      validate_external_urls: true
+      ignore_urls:
+        - "^mailto:"
+        - "^tel:"
 
 nav:
   - CTO Playbook: index.md
@@ -59,7 +92,7 @@ nav:
       - Platform vs. Agency: strategy/platform-vs-agency.md
   - Platform:
       - Nearshore IT Co-Pilot™: platform/nearshore-it-co-pilot.md
-      - Axiom Cortex™: platform/axiom-cortex.md
+      - Axiom Cortex™: https://docs.teamstation.dev/
       - Nebula Neural Search™: platform/nebula-neural-search.md
       - SSOT & Governance: platform/ssot-governance.md
       - Devices, MDM & EOR: platform/devices-mdm-eor.md
