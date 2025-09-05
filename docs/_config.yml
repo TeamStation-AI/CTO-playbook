@@ -1,12 +1,31 @@
-title: TeamStation AI
-description: CTO Playbook
+title: TeamStation AI — CTO Playbook
+description: CTO Playbook for Nearshore IT Co-Pilot — Axiom Cortex™, Nebula Neural Search™, SSOT governance, security, ROI.
 url: https://teamstation-ai.github.io
 baseurl: /CTO-playbook
+
+# SEO and Schema
+author: TeamStation AI
+lang: en
+
+# Social media
+twitter:
+  username: TeamStationAI
+  card: summary_large_image
+
+# Organization schema
+social:
+  name: TeamStation AI
+  links:
+    - https://teamstation.dev
+    - https://github.com/TeamStation-AI
+    - https://linkedin.com/company/teamstation-ai
 
 theme: null
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 permalink: pretty
 search_enabled: true
@@ -16,6 +35,10 @@ logo:
 aux_links:
   "View on GitHub":
     - "https://github.com/TeamStation-AI/CTO-playbook"
+  "TeamStation Website":
+    - "https://teamstation.dev"
 
 exclude:
   - mkdocs.yml
+  - Gemfile
+  - Gemfile.lock

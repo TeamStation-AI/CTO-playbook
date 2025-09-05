@@ -1,3 +1,11 @@
+---
+layout: default
+title: Axiom Cortex™
+parent: Platform
+nav_order: 2
+description: "Unified Cognitive AI Evaluation Engine for aligning candidates to your outcomes, not résumés"
+---
+
 # Axiom Cortex™ — Unified Cognitive AI Evaluation Engine
 
 **Purpose:** align candidates to **your outcomes**, not résumés.

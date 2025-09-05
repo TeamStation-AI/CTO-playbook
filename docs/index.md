@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "CTO Playbook — Nearshore IT Co-Pilot"
 description: "CTO Playbook for TeamStation AI’s Nearshore IT Co-Pilot — Axiom Cortex™, Nebula Neural Search™, SSOT governance, security, ROI."
 ---
