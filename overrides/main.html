@@ -1,1 +1,15 @@
-feat: add dynamic OG/Twitter + JSON-LD overrides
+{% extends "base.html" %}
+
+{# Dynamic OG/Twitter + JSON-LD overrides #}
+{% block extrahead %}
+  {{ super() }}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title if page else config.site_name }}">
+  <meta property="og:description" content="{{ (page.meta.description if page and page.meta else config.site_description) }}">
+  {% if page %}<meta property="og:url" content="{{ page.canonical_url }}">{% endif %}
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title if page else config.site_name }}">
+  <meta name="twitter:description" content="{{ (page.meta.description if page and page.meta else config.site_description) }}">
+{% endblock %}

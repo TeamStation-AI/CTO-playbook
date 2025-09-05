@@ -1,0 +1,4 @@
+Usage: mkdocs serve [OPTIONS]
+Try 'mkdocs serve -h' for help.
+
+Error: No such option: --no-reload (Possible options: --dirtyreload, --livereload, --no-livereload)
