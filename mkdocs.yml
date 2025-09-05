@@ -41,6 +41,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.highlight
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: TeamStation-AI
+      repo: CTO-playbook
 
 plugins:
   - search
