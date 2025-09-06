@@ -1,0 +1,113 @@
+/* TeamStation AI — Dark theme for Just the Docs */
+
+/* Font for brand title */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Brand colors */
+:root {
+  --ts-primary: #0a164f;      /* deep blue brand */
+  --ts-bg: #0b0e14;           /* almost-black page background */
+  --ts-text: #e6edf3;         /* light text */
+  --ts-muted: #9aa7b3;        /* muted text */
+  --ts-accent: #3c50ff;       /* electric blue */
+  --ts-accent-hover: #6a7aff; /* hover */
+  --ts-border: #1f2a44;       /* borders in dark */
+  --ts-surface: #101726;      /* cards / code / tables */
+}
+
+/* Global dark surface + text */
+html, body {
+  background: var(--ts-bg) !important;
+  color: var(--ts-text) !important;
+}
+
+/* Header (brand bar) */
+.site-header {
+  background: var(--ts-primary) !important;
+  border-bottom: 0 !important;
+}
+.site-title, .site-title:visited {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+/* Sidebar and navigation */
+.side-bar {
+  background: var(--ts-primary) !important;
+  border-right: 0 !important;
+}
+.site-nav, .nav-list, .nav-list .nav-list-item > a.nav-list-link {
+  color: #dbe5ff !important;
+}
+.nav-list .nav-list-item > a.nav-list-link:hover,
+.nav-list .nav-list-item > a.nav-list-link.active {
+  color: var(--ts-accent-hover) !important;
+  border-left: 3px solid var(--ts-accent) !important;
+}
+
+/* Main content area */
+.main-content {
+  background: transparent !important;
+  color: var(--ts-text) !important;
+}
+.main-content h1, .main-content h2, .main-content h3,
+.main-content h4, .main-content h5, .main-content h6 {
+  color: #ffffff !important;
+}
+.main-content p, .main-content li, .main-content dt, .main-content dd {
+  color: var(--ts-text) !important;
+}
+
+/* Links */
+a { color: var(--ts-accent) !important; }
+a:hover, a:focus { color: var(--ts-accent-hover) !important; }
+
+/* Code, pre, and blockquotes */
+pre, code, .highlighter-rouge, .highlight {
+  background: var(--ts-surface) !important;
+  color: var(--ts-text) !important;
+  border: 1px solid var(--ts-border) !important;
+}
+blockquote {
+  background: var(--ts-surface) !important;
+  border-left: 4px solid var(--ts-accent) !important;
+  color: var(--ts-text) !important;
+}
+
+/* Tables */
+table {
+  background: var(--ts-surface) !important;
+  color: var(--ts-text) !important;
+  border: 1px solid var(--ts-border) !important;
+}
+table th, table td { border-color: var(--ts-border) !important; }
+table thead th { background: #131c2e !important; }
+
+/* Buttons */
+.btn, .btn-primary {
+  background: var(--ts-accent) !important;
+  border-color: var(--ts-accent) !important;
+  color: #fff !important;
+}
+.btn:hover, .btn-primary:hover {
+  background: var(--ts-accent-hover) !important;
+  border-color: var(--ts-accent-hover) !important;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--ts-primary) !important;
+  color: #e8ecff !important;
+  border-top: 0 !important;
+}
+
+/* Search input */
+.search-input {
+  background: var(--ts-surface) !important;
+  color: var(--ts-text) !important;
+  border: 1px solid var(--ts-border) !important;
+}
+.search-input::placeholder { color: var(--ts-muted) !important; }
+
+hr { border-color: var(--ts-border) !important; }
